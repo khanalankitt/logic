@@ -6,10 +6,14 @@ export default function Gate(props){
     const [a,setA] = useState(0);
     const [b,setB] = useState(0);
     const [res,setResult] = useState("R");
+    const [aColor,setColorA] = useState("#f7c6c5");
+    const [bColor,setColorB] = useState("#f7c6c5");
+    const [spanColor,setSpanColor] = useState("#f4f5ff")
     function handleClickA() {
         setA((prevA) => {
             const newA = prevA === 0 ? 1 : 0;
             updateResult(newA, b);
+            newA == 0 ? setColorA("#f7c6c5") : setColorA("#d3f7ce");
             console.log(`${newA} ${b} ${res}`);
             return newA;
         });
@@ -19,6 +23,7 @@ export default function Gate(props){
         setB((prevB) => {
             const newB = prevB === 0 ? 1 : 0;
             updateResult(a, newB);
+            newB == 0 ? setColorB("#f7c6c5") : setColorB("#d3f7ce");
             console.log(`${a} ${newB} ${res}`);
             return newB;
         });
@@ -26,7 +31,6 @@ export default function Gate(props){
     
     function updateResult(inputA, inputB) {
         let result;
-    
         switch (pathName) {
             case '/and':
                 result = inputA & inputB;
@@ -50,7 +54,7 @@ export default function Gate(props){
                 console.log("Error");
                 return;
         }
-    
+        result == 0 ? setSpanColor("#f7c6c5") : setSpanColor("#d3f7ce");
         setResult(result);
     }
     
@@ -133,14 +137,20 @@ export default function Gate(props){
                     </div>
                     <div className="game">
                         <div className="left">
-                            <button onClick={handleClickA}>{a}</button><br />
-                            <button onClick={handleClickB}>{b}</button>
+                            <button style={{
+                                background:`${aColor}`
+                            }} onClick={handleClickA}>{a}</button><br />
+                            <button  style={{
+                                background:`${bColor}`
+                            }}  onClick={handleClickB}>{b}</button>
                         </div>
                         <p style={{fontSize:"30px",marginLeft:"10px"}}>
                             ➜
                         </p>
                         <div className="right">
-                            <div className="span">
+                            <div className="span"  style={{
+                                background:`${spanColor}`
+                            }} >
                                 {res}
                             </div>
                         </div>
