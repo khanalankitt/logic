@@ -1,95 +1,53 @@
-import Image from 'next/image'
-import styles from './page.module.css'
-
+import Header from "./(components)/header/page"
+import "./style.css"
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
+    <>
+      <Header/>
+      <div className="homeContent">
         <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
+        Logic gates are fundamental building blocks of digital
+         circuits and are used to perform logical operations on
+          binary inputs. These gates are the basic components that 
+          form the foundation of digital systems, such as computers
+           and other electronic devices.
+         There are several types of logic gates, each performing a 
+         specific logical operation.
         </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+        <ul style={{
+          padding:"10px 30px",
+          lineHeight:"25px",
+        }}>
+          <li>AND GATE</li>
+          <li>OR GATE</li>
+          <li>NOT GATE</li>
+          <li>NAND GATE</li>
+          <li>NOR GATE</li>
+          <li>XOR GATE</li>
+          <li>XNOR GATE</li>
+        </ul>
+        <h1>Reasons Why Logic Gates are Used in Digital Circuits</h1>
+        <ul style={{
+          columns: 2,
+          lineHeight:"30px",
+          listStyleType: "none",
+          marginTop:"10px",
+          fontSize:"17px"
+
+
+        }}>
+            <li>1. Digital Information Processing</li>
+            <li>2. Boolean Logic Implementation</li>
+            <li>3. Circuit Building Blocks </li>
+            <li>4. Information Storage </li>
+            <li>5. Control Signals</li>
+            <li>6. Data Manipulation</li>
+            <li>7. Signal Processing</li>
+            <li>8. Automation and Decision Making</li>
+            <li>9. Reliability and Reproducibility</li>
+            <li>10. Miniaturization and Integration </li>
+        </ul>
         </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
+    </>
   )
 }
