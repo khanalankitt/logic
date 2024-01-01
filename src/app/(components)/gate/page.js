@@ -5,34 +5,55 @@ export default function Gate(props){
     const pathName = usePathname();
     const [a,setA] = useState(0);
     const [b,setB] = useState(0);
-const [res,setResult] = useState("R");
-    function handleClickA(){
-        setA((prevA) => (prevA === 0 ? 1 : 0));
-        setResult(
-            pathName == '/and' ? a & b :
-            pathName == '/or' ? a | b :
-            pathName == '/nand' ? !(a & b) :
-            pathName == '/nor' ? !(a | b) :
-            pathName == '/xor' ? (a !== b ? 1 : 0) :
-            pathName == '/xnor' ? (a !== b ? 0 : 1) :
-            (console.log("Error"), null)
-          );
-          console.log(`${a} ${b} ${res}`)
+    const [res,setResult] = useState("R");
+    function handleClickA() {
+        setA((prevA) => {
+            const newA = prevA === 0 ? 1 : 0;
+            updateResult(newA, b);
+            console.log(`${newA} ${b} ${res}`);
+            return newA;
+        });
     }
-    function handleClickB(){
-        setB((prevB) => (prevB === 0 ? 1 : 0));
-        setResult(
-            pathName == '/and' ? a & b :
-            pathName == '/or' ? a | b :
-            pathName == '/nand' ? !(a & b) :
-            pathName == '/nor' ? !(a | b) :
-            pathName == '/xor' ? (a !== b ? 1 : 0) :
-            pathName == '/xnor' ? (a !== b ? 0 : 1) :
-            console.log("Error")
-            );
-          console.log(`${a} ${b} ${res}`)
-
+    
+    function handleClickB() {
+        setB((prevB) => {
+            const newB = prevB === 0 ? 1 : 0;
+            updateResult(a, newB);
+            console.log(`${a} ${newB} ${res}`);
+            return newB;
+        });
+    }
+    
+    function updateResult(inputA, inputB) {
+        let result;
+    
+        switch (pathName) {
+            case '/and':
+                result = inputA & inputB;
+                break;
+            case '/or':
+                result = inputA | inputB;
+                break;
+            case '/nand':
+                result = inputA === 0 || inputB === 0 ? 1 : 0;  
+                break;
+            case '/nor':
+                result = inputA === 0 && inputB === 0 ? 1 : 0;  
+                break;
+            case '/xor':
+                result = inputA !== inputB ? 1 : 0;
+                break;
+            case '/xnor':
+                result = inputA === inputB ? 1 : 0;
+                break;
+            default:
+                console.log("Error");
+                return;
         }
+    
+        setResult(result);
+    }
+    
     return(
         <>
             <div className="gateContainer">
