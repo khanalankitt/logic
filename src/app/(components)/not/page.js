@@ -18,23 +18,29 @@ export default function NOT(){
                     marginTop:"10px"
                 }}>NOT GATE</h1>
                 <div className="upper">
-                    <div className="image">
-                        <b>
-                            <p style={{
-                                color:"#2f1c6a"
-                            }}>LOGIC SYMBOL</p>
-                        </b>
-                        <img
+                    <div className="not-image image">
+                            <p className="not-p" >
+                                <b>
+                                    LOGIC SYMBOL
+                                </b>
+                            </p>
+                        <img className="img-not" id="img-not"
                             src="NOT.PNG" alt="gate"
-                            style={{zIndex:-1}}
+                            style={{
+                                marginTop:"-10px",
+                                zIndex:-1,
+                                height:`${window.innerWidth > 425 ? '180px' : '150px' }`,
+                                objectFit:"cover"
+                            }}
                         />
                     </div>
                     <div className="table">
-                        <b>
-                            <p style={{
-                                color:"#2f1c6a"
-                            }}>TRUTH TABLE</p>
-                        </b>
+
+                            <p className="not-tableP">
+                                <b>
+                                    TRUTH TABLE
+                                </b>
+                            </p>
                         <table cellSpacing={0}>
                             <thead>
                                 <tr>
@@ -59,14 +65,13 @@ export default function NOT(){
                 </div>
                 <div className="middle">
                     <div className="text">
-                        <b>
-                            <h2 style={{
+                            <h2 className="h2-middle" style={{
                                 marginBottom:"10px",
-                                color:"#2f1c6a"
                             }}>
-                                Visualizer
+                                <b>
+                                    Visualizer
+                                </b>
                             </h2>
-                        </b>
                         <p>
                             Experiment,visualize and understand the logic gate by yourself. <br />
                             Click the buttons to generate the corresponding output.
@@ -96,16 +101,18 @@ export default function NOT(){
                     </div>
                 </div>
                 <div className="lower">
+                    <h2 className="not-h2-lower">
+                        <b>
+                            Description:
+                        </b><br />
+                    </h2>
                     <p>
-                        <b style={{
-                                color:"#2f1c6a"
-                            }}>Description:</b><br />
-                            {`A NOT gate, also known as an inverter,
-                              is another fundamental digital logic gate. 
-                              Its primary function is to produce the opposite 
-                              (complement) of its input signal. In other words,
-                               if the input is high or true,
-                              the output is low or false, and vice versa.`}
+                        {`A NOT gate, also known as an inverter,
+                          is another fundamental digital logic gate. 
+                          Its primary function is to produce the opposite 
+                          (complement) of its input signal. In other words,
+                           if the input is high or true,
+                          the output is low or false, and vice versa.`}
                     </p>
                 </div>
             </div>

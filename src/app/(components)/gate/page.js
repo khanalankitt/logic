@@ -14,7 +14,6 @@ export default function Gate(props){
             const newA = prevA === 0 ? 1 : 0;
             updateResult(newA, b);
             newA == 0 ? setColorA("#f7c6c5") : setColorA("#d3f7ce");
-            console.log(`${newA} ${b} ${res}`);
             return newA;
         });
     }
@@ -24,7 +23,6 @@ export default function Gate(props){
             const newB = prevB === 0 ? 1 : 0;
             updateResult(a, newB);
             newB == 0 ? setColorB("#f7c6c5") : setColorB("#d3f7ce");
-            console.log(`${a} ${newB} ${res}`);
             return newB;
         });
     }
@@ -66,22 +64,23 @@ export default function Gate(props){
                 }}>{props.name}</h1>
                 <div className="upper">
                     <div className="image">
-                        <b>
-                            <p style={{
-                                color:"#2f1c6a"
-                            }}>LOGIC SYMBOL</p>
-                        </b>
-                        <img
-                            src={props.src} alt="gate"
+                            <p className="logic-p"> 
+                                <b>
+                                    LOGIC SYMBOL
+                                </b>
+                            </p>
+
+                        <img className="gate-img"
+                            src={props.src} alt="gate" 
                             style={{zIndex:-1}}
                         />
                     </div>
                     <div className="table">
-                        <b>
-                            <p style={{
-                                color:"#2f1c6a"
-                            }}>TRUTH TABLE</p>
-                        </b>
+                            <p className="table-p" >
+                                <b>
+                                    TRUTH TABLE
+                                </b>
+                            </p>
                         <table cellSpacing={0}>
                             <thead>
                                 <tr>
@@ -122,14 +121,13 @@ export default function Gate(props){
                 {/* <hr /> */}
                 <div className="middle">
                     <div className="text">
-                        <b>
-                            <h2 style={{
+                            <h2 className="visualizer-h2" style={{
                                 marginBottom:"10px",
-                                color:"#2f1c6a"
                             }}>
-                                Visualizer
+                                <b>
+                                    Visualizer
+                                </b>
                             </h2>
-                        </b>
                         <p>
                             Experiment,visualize and understand the logic gate by yourself. <br />
                             Click the buttons to generate the corresponding output.
@@ -158,11 +156,13 @@ export default function Gate(props){
                 </div>
                 {/* <hr /> */}
                 <div className="lower">
+                    <h2 className="description-h2">
+                        <b>
+                            Description:
+                        </b>
+                    </h2>
                     <p>
-                        <b style={{
-                                color:"#2f1c6a"
-                            }}>Description:</b><br />
-                       {props.description}
+                        {props.description}
                     </p>
                 </div>
             </div>

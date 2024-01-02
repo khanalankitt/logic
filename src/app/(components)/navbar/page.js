@@ -1,3 +1,5 @@
+"use client"
+import { useState, useEffect } from 'react';
 import Link from "next/link";
 const details = {
     home:{classname:"nav-li home",link:"/",name:"<HOME/>"},
@@ -9,8 +11,42 @@ const details = {
     xor:{classname:"nav-li xor",link:"/xor",name:"XOR"},
     xnor:{classname:"nav-li xnor",link:"/xnor",name:"XNOR"},
 }
+// components/ThemeToggle.js
+
+
+export const ThemeToggle = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check if there's a stored theme preference in local storage
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDarkMode(savedTheme === 'dark');
+    }
+  }, []);
+
+  const toggleTheme = () => {
+    const newTheme = isDarkMode ? 'light' : 'dark';
+    setIsDarkMode(!isDarkMode);
+    localStorage.setItem('theme', newTheme);
+
+    // Apply the new theme to the entire document body
+    document.body.classList.toggle('dark-theme', isDarkMode);
+  };
+
+  return (
+    <img src="dark.png" alt="darkIcon" className="darkimage" onClick={toggleTheme} style={{
+        height:"30px",
+        width:"30px",
+        marginLeft:"10px",
+        marginTop:"5px",
+        cursor:"pointer"
+    }}/>
+  );
+};
+
+
 export default function NavBar(){
-  
     return(
         <>
            <nav>
@@ -23,7 +59,10 @@ export default function NavBar(){
                       </li>
                     ))}
                         <li>
-                            <img src="dark.png" alt="darkIcon"
+                            <ThemeToggle/>
+                        </li>
+                        <li>
+                            {/* <img src="dark.png" alt="darkIcon"
                                 style={{
                                     height:"30px",
                                     width:"30px",
@@ -31,7 +70,7 @@ export default function NavBar(){
                                     marginTop:"5px",
                                     cursor:"pointer"
                                 }}
-                            />
+                            /> */}
                         </li>
 
                 </ul>
