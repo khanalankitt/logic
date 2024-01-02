@@ -1,7 +1,7 @@
 import Gate from "../gate/page";
 const details = {
     name:"NAND GATE",
-    src:"nand.png",
+    src:"/nand.png",
     output:[1,1,1,0],
     description:`
     A NAND gate is another basic digital 

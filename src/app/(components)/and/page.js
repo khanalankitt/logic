@@ -1,7 +1,7 @@
 import Gate from "../gate/page";
 const details = {
     name:"AND GATE",
-    src:"and.png",
+    src:"/and.png",
     output:[0,0,0,1],
     description:`An AND gate is a basic digital logic gate 
     that performs a logical conjunction, meaning it outputs 
@@ -12,7 +12,6 @@ const details = {
      symbol:"A.B"
 }
 export default function AND(){
-    
     return (
         <>
             <Gate {...details}/>

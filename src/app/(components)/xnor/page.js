@@ -1,7 +1,7 @@
 import Gate from "../gate/page";
 const details = {
     name:"X-NOR GATE",
-    src:"xnor.png",
+    src:"/xnor.png",
     output:[1,0,0,1],
     description:`
         An XNOR gate, also known as 

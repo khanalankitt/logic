@@ -1,7 +1,7 @@
 import Gate from "../gate/page";
 const details = {
     name:"NOR GATE",
-    src:"nor.png",
+    src:"/nor.png",
     output:[1,0,0,0],
     description:`
     A NOR gate is another basic digital logic gate,

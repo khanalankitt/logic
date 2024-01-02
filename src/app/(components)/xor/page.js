@@ -1,7 +1,7 @@
 import Gate from "../gate/page";
 const details = {
     name:"XOR GATE",
-    src:"xor.png",
+    src:"/xor.png",
     output:[0,1,1,0],
     description:`An XOR gate, which stands for 
     "exclusive OR," is a digital logic gate that 

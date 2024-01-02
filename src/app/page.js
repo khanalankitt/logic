@@ -1,5 +1,6 @@
 import "./style.css"
 import Footer from './(components)/footer/page'
+import Image from "next/image"
 export default function Home() {
   return (
     <>

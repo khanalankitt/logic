@@ -1,6 +1,7 @@
 "use client"
 import {useState} from 'react';
 import { usePathname } from 'next/navigation'
+import Image from 'next/image';
 export default function Gate(props){
     const pathName = usePathname();
     const [a,setA] = useState(0);
@@ -70,7 +71,7 @@ export default function Gate(props){
                                 </b>
                             </p>
 
-                        <img className="gate-img"
+                        <Image width={180} height={200} className="gate-img"
                             src={props.src} alt="gate" 
                             style={{zIndex:-1}}
                         />
