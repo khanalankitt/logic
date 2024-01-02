@@ -60,17 +60,7 @@ export default function NavBar(){
                         <li>
                             <ThemeToggle/>
                         </li>
-                        <li>
-                            {/* <img src="dark.png" alt="darkIcon"
-                                style={{
-                                    height:"30px",
-                                    width:"30px",
-                                    marginLeft:"10px",
-                                    marginTop:"5px",
-                                    cursor:"pointer"
-                                }}
-                            /> */}
-                        </li>
+                      
 
                 </ul>
             </nav>
