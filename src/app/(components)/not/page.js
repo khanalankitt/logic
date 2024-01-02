@@ -1,5 +1,6 @@
 "use client"
 import {useState} from 'react';
+import Image from 'next/image';
 export default function NOT(){
     const [value,setValue] = useState(1);
     const [Bvalue,BsetValue] = useState(0);
@@ -24,8 +25,8 @@ export default function NOT(){
                                     LOGIC SYMBOL
                                 </b>
                             </p>
-                        <img className="img-not" id="img-not"
-                            src="NOT.PNG" alt="gate"
+                        <Image height={200} width={180} className="img-not" id="img-not"
+                            src="/NOT.PNG" alt="gate"
                             style={{
                                 marginTop:"-10px",
                                 zIndex:-1,
