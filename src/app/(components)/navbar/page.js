@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from 'react';
 import Link from "next/link";
+import Image from 'next/image';
 const details = {
     home:{classname:"nav-li home",link:"/",name:"<HOME/>"},
     and:{classname:"nav-li and",link:"/and",name:"AND"},
@@ -35,9 +36,7 @@ export const ThemeToggle = () => {
   };
 
   return (
-    <img src="dark.png" alt="darkIcon" className="darkimage" onClick={toggleTheme} style={{
-        height:"30px",
-        width:"30px",
+    <Image height={30} width={30} src="/dark.png" alt="darkIcon" className="darkimage" onClick={toggleTheme} style={{
         marginLeft:"10px",
         marginTop:"5px",
         cursor:"pointer"
