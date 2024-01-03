@@ -82,7 +82,7 @@ export default function Gate(props){
                                     TRUTH TABLE
                                 </b>
                             </p>
-                        <table cellSpacing={0}>
+                        <table cellSpacing="0">
                             <thead>
                                 <tr>
                                     <th>A</th>
