@@ -26,7 +26,7 @@ export default function NOT(){
                                 </b>
                             </p>
                         <Image height={200} width={180} className="img-not" id="img-not"
-                            src="/NOT.PNG" alt="gate"
+                            src="/not.png" alt="gate"
                             style={{
                                 marginTop:"-10px",
                                 zIndex:-1,

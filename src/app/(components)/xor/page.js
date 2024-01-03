@@ -2,12 +2,10 @@ import Gate from "../gate/page";
 const details = {
     name:"XOR GATE",
     src:"/xor.png",
-    output:{
         i:0,
         ii:1,
         iii:1,
-        iv:0
-    },
+        iv:0,
     description:`An XOR gate, which stands for 
     "exclusive OR," is a digital logic gate that 
     produces a high or true output only when the

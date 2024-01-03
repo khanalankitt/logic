@@ -2,12 +2,10 @@ import Gate from "../gate/page";
 const details = {
     name:"X-NOR GATE",
     src:"/xnor.png",
-    output:{
         i:1,
         ii:0,
         iii:0,
-        iv:1
-    },
+        iv:1,
     description:`
         An XNOR gate, also known as 
         "exclusive NOR" or "equivalence gate," is a digital
