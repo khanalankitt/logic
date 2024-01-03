@@ -48,7 +48,7 @@ export default function NOT(){
                                     <th>A</th>
                                     <th style={{
                                         width:"80px"
-                                    }}>(A)'</th>
+                                    }}>(A)&apos;</th>
                                 </tr>
                             </thead>
                             <tbody>
