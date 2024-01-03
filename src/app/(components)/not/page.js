@@ -1,5 +1,5 @@
 "use client"
-import {useState} from 'react';
+import {useState,useEffect} from 'react';
 import Image from 'next/image';
 export default function NOT(){
     const [value,setValue] = useState(1);
@@ -30,7 +30,10 @@ export default function NOT(){
                             style={{
                                 marginTop:"-10px",
                                 zIndex:-1,
-                                height:`${window.innerWidth > 425 ? '180px' : '150px' }`,
+                                height:`${ useEffect(()=> {
+                                    window.innerWidth > 425 ? '180px' : '150px'
+                                    return;
+                                },[])  }`,
                                 objectFit:"cover"
                             }}
                         />
