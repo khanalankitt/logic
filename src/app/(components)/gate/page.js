@@ -98,22 +98,22 @@ export default function Gate(props){
                                 <tr>
                                     <td>0</td>
                                     <td>0</td>
-                                    <td>{props.output[0]}</td>
+                                    <td>{props.output.i}</td>
                                 </tr>
                                 <tr>
                                     <td>0</td>
                                     <td>1</td>
-                                    <td>{props.output[1]}</td>
+                                    <td>{props.output.ii}</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td>0</td>
-                                    <td>{props.output[2]}</td>
+                                    <td>{props.output.iii}</td>
                                 </tr>
                                 <tr>
                                     <td>1</td>
                                     <td>1</td>
-                                    <td>{props.output[3]}</td>
+                                    <td>{props.output.iv}</td>
                                 </tr>
                             </tbody>
                         </table>
