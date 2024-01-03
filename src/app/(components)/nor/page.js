@@ -13,7 +13,7 @@ const details = {
        In simpler terms, a NOR gate produces a high or 
        true output only when both of its inputs are 
        low or false;
-     otherwise, the output is high or true.`,
+     otherwise, the output is low or false.`,
      symbol:"(A+B)'"
 }
 export default function NOR(){
