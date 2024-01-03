@@ -18,6 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head>
         <meta property="og:image" content="/preview.png"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
       <body className={inter.className}>
