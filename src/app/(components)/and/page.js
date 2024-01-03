@@ -2,12 +2,10 @@ import Gate from "../gate/page";
 const details = {
     name:"AND GATE",
     src:"/and.png",
-    output:{
-        i:0,
-        ii:0,
-        iii:0,
-        iv:1
-    },
+    i:0,
+    ii:0,
+    iii:0,
+    iv:1,
     description:`An AND gate is a basic digital logic gate 
     that performs a logical conjunction, meaning it outputs 
     a true (or high) signal only when both of its inputs are
