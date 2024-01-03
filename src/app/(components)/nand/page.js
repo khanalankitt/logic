@@ -2,7 +2,12 @@ import Gate from "../gate/page";
 const details = {
     name:"NAND GATE",
     src:"/nand.png",
-    output:[1,1,1,0],
+    output:{
+        i:1,
+        ii:1,
+        iii:1,
+        iv:0
+    },
     description:`
     A NAND gate is another basic digital 
     logic gate that stands for "NOT-AND."

@@ -2,7 +2,12 @@ import Gate from "../gate/page";
 const details = {
     name:"OR GATE",
     src:"/or.png",
-    output:[0,1,1,1],
+    output:{
+        i:0,
+        ii:1,
+        iii:1,
+        iv:1
+    },
     description:`
     An OR gate is a fundamental digital logic gate that
      performs a logical OR operation. In simple terms, an OR
