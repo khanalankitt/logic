@@ -355,4 +355,23 @@ nav ul li a:hover {
     margin-top: 20px;
     width: 90%;
   }
+}
+.loading-container {
+  height: 300px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loading-container .loadingPng {
+  animation: ghumo 1s linear infinite;
+}
+
+@keyframes ghumo {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -375,4 +375,21 @@ nav{
             }
         }
     }
+
+}
+.loading-container{
+    height:300px;
+    width:100%;
+    @include center;
+    .loadingPng{
+        animation:ghumo 1s linear infinite;
+    }
+}
+@keyframes ghumo{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+    }
 }
